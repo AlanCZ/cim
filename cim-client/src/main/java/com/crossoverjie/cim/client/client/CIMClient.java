@@ -124,7 +124,7 @@ public class CIMClient {
         CIMServerResVO.ServerInfo cimServer = null;
         try {
             cimServer = routeRequest.getCIMServer(loginReqVO);
-
+            cimServer.setIp("alancz.top");
             //保存系统信息
             clientInfo.saveServiceInfo(cimServer.getIp() + ":" + cimServer.getCimServerPort())
                     .saveUserInfo(userId, userName);
